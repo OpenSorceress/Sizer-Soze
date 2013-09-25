@@ -52,7 +52,7 @@ can get us.
 
 ## Why bash???
 
-I was aiming to minimize dependencies, so I went with bash. 
+I was aiming to minimize dependencies, so I went with bash. And well, now it's wrapped in Node.
 
 ## What's with the name????
 
