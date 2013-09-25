@@ -1,6 +1,6 @@
 /*global require:true*/
 
-(function(){
+(function( exports ){
   'use strict';
 
   var sizer_soze = require('../sizer-soze.js');
@@ -25,7 +25,7 @@
       test.ifError(value)
   */
 
-  exports['awesome'] = {
+  exports.awesome = {
     setUp: function(done) {
       // setup here
       done();
@@ -37,4 +37,4 @@
       test.done();
     }
   };
-}());
+}( typeof exports === 'object' && exports || this ));
