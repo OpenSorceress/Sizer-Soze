@@ -14,11 +14,19 @@
   var execFile = require( "child_process" ).execFile,
       url = require( 'url' );
 
-  exports.awesome = function() {
-    return 'awesome';
-  };
-
   exports.sizer = function( site, callback ){
+
+    if( !site ){
+      throw new Error( "A URL must be sent" );
+    }
+
+    if( !callback ){
+      throw new Error( "A callback is necessary to grab any data" );
+    }
+
+    if( typeof callback !== Function ){
+      throw new Error( "A valid callback function is necessary" );
+    }
 
     var command = "./lib/sizer";
 

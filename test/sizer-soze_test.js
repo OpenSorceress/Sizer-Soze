@@ -25,7 +25,7 @@
       test.ifError(value)
   */
 
-  exports.awesome = {
+  exports.sizer = {
     setUp: function(done) {
       // setup here
       done();
@@ -33,7 +33,25 @@
     'no args': function(test) {
       test.expect(1);
       // tests here
-      test.equal(sizer_soze.awesome(), 'awesome', 'should be awesome.');
+      test.throws(function(){
+        sizer_soze.sizer();
+      }, Error, "A URL must be sent");
+      test.done();
+    },
+    'one arg': function(test) {
+      test.expect(1);
+      // tests here
+      test.throws(function(){
+        sizer_soze.sizer( "www.cnn.com" );
+      }, Error, "A callback is necessary to grab any data");
+      test.done();
+    },
+    'callback is not valid': function(test) {
+      test.expect(1);
+      // tests here
+      test.throws(function(){
+        sizer_soze.sizer( "www.cnn.com", "foo" );
+      }, Error, "A callback is necessary to grab any data");
       test.done();
     }
   };
