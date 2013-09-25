@@ -1,3 +1,11 @@
+/*
+ * sizer-soze
+ * https://github.com/jlembeck/Sizer-Soze
+ *
+ * Copyright (c) 2013 Jeffrey Lembeck & Yoav Weiss
+ * Licensed under the MIT license.
+ */
+
 /*global process:true*/
 /*global require:true*/
 (function( exports ){
@@ -5,6 +13,10 @@
 
   var execFile = require( "child_process" ).execFile,
       url = require( 'url' );
+
+  exports.awesome = function() {
+    return 'awesome';
+  };
 
   exports.sizer = function( site, callback ){
 

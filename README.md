@@ -1,3 +1,8 @@
+# sizer-soze
+
+Node version of the wonderful Sizer-Soze project
+
+
 # What is the cost of your non-responsive images?
 
 We've been talking about responsive images for years now, but what is
@@ -11,9 +16,17 @@ So, I wrote this small script that measures a certain site in multiple
 viewports and outputs the bytes we can optimize losslessly and the bytes
 we can optimize if we'd tailor the images to this specific viewport.
 
-## Usage
+## Getting Started
+Install the module with: `npm install sizer-soze`
 
-`./sizer <URL>`
+```
+var soze = require( './sizer-soze' );
+
+soze.sizer( url, function( err, data ){
+  if( err ){ throw err; }
+  console.log( data );
+});
+```
 
 # Results
 
@@ -45,8 +58,22 @@ can get us.
 
 ## Why bash???
 
-I was aiming to minimize dependencies, so I went with bash. 
+I was aiming to minimize dependencies, so I went with bash. And well, now it's wrapped in Node.
 
 ## What's with the name????
 
 It's Saturday.
+
+## Documentation
+_(Coming soon)_
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) 2013 Jeffrey Lembeck & Yoav Weiss  
+Licensed under the MIT license.
+
