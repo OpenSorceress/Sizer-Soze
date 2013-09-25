@@ -8,10 +8,12 @@
 
   exports.sizer = function( site, callback ){
 
+    var command = "./lib/sizer";
+
     var obj = url.parse(site),
         formatted = url.format(obj);
 
-    execFile( "./sizer", [ formatted ], function( err, stdout, stderr ){
+    execFile( command, [ formatted ], function( err, stdout, stderr ){
       var data;
       if( err ){
         callback( err );
