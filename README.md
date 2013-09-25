@@ -13,7 +13,14 @@ we can optimize if we'd tailor the images to this specific viewport.
 
 ## Usage
 
-`./sizer <URL>`
+```
+var soze = require( './sizer-soze' );
+
+soze.sizer( url, function( err, data ){
+  if( err ){ throw err; }
+  console.log( data );
+});
+```
 
 # Results
 
