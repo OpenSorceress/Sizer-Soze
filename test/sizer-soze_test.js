@@ -32,7 +32,6 @@
     },
     'no args': function(test) {
       test.expect(1);
-      // tests here
       test.throws(function(){
         sizer_soze.sizer();
       }, Error, "A URL must be sent");
@@ -40,7 +39,6 @@
     },
     'one arg': function(test) {
       test.expect(1);
-      // tests here
       test.throws(function(){
         sizer_soze.sizer( "www.cnn.com" );
       }, Error, "A callback is necessary to grab any data");
@@ -48,11 +46,17 @@
     },
     'callback is not valid': function(test) {
       test.expect(1);
-      // tests here
       test.throws(function(){
         sizer_soze.sizer( "www.cnn.com", "foo" );
       }, Error, "A callback is necessary to grab any data");
       test.done();
+    //},
+    //'callback brings back data': function(test) {
+    //  test.expect(1);
+    //  sizer_soze.sizer( "www.cnn.com", function( data ){
+    //    test.ok( data );
+    //    test.done();
+    //  });
     }
   };
 }( typeof exports === 'object' && exports || this ));

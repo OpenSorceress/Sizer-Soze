@@ -24,7 +24,7 @@
       throw new Error( "A callback is necessary to grab any data" );
     }
 
-    if( typeof callback !== Function ){
+    if( typeof callback !== "function" ){
       throw new Error( "A valid callback function is necessary" );
     }
 
